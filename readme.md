@@ -3,7 +3,7 @@
 
 <img src="./assets/learn-nation-logo.webp" alt="learn nation logo" width="350">
 
-## Context
+## Overview
 Hey developers! We've got two exciting projects from different departments that need your Python expertise. Both projects involve working with our Codetrack platform data, but they serve different business needs.
 
 ## Project Tiers
