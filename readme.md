@@ -50,14 +50,8 @@ Consider your current skill level and interests when choosing your project:
    - Your solutions will serve as prototypes for:
      - **Team Generator**: Future automated team management systems
      - **Trading Card Generator**: Gamified learning and achievement tracking platforms
-   - Outstanding implementations may be selected for production development, with original developers leading the initiatives
+   - Outstanding implementations may be selected for production development, with original developers participating in the initiatives
 
-5. **Career Advancement Opportunities**
-   - Project leads may be considered for:
-     - Technical Team Lead positions
-     - Product Development roles
-     - AI Integration specialist roles
-     - Engineering Management tracks
 
 ### Success Metrics
 
