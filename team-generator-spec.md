@@ -55,8 +55,14 @@ import time                    # For rate limiting
 
 ## Technical Resources
 - [Python Virtual Environment Setup](https://github.com/jdrichards-pursuit/python-virtual-environment-setup) - remember you do not need to select the ipykernel or select the shell using a .py file
+- [Web Scraping In ClassTheory Training](https://github.com/jdrichards-pursuit/week-9.1-web-scraping-and-sentiment-analysis-theory)
 - [BeautifulSoup Documentation](https://beautiful-soup-4.readthedocs.io/en/latest/)
 - [Selenium Documentation](https://selenium-python.readthedocs.io/)
+- [Pathlib Documentation](https://docs.python.org/3/library/pathlib.html)
+- [CSV Documentation](https://docs.python.org/3/library/csv.html)
+- [JSON Documentation](https://docs.python.org/3/library/json.html)
+- [Random Documentation](https://docs.python.org/3/library/random.html)
+- [Time Documentation](https://docs.python.org/3/library/time.html)
 - [Gemini API](https://cloud.google.com/vertex-ai/generative-ai/gemini/gemini-1.5-flash)
 - [Chrome Browser](https://www.google.com/chrome/)
 - [Gemini API Documentation](https://ai.google.dev/gemini-api/docs)
