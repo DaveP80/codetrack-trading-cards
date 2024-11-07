@@ -1,7 +1,7 @@
-# Trading Card Generator Project (Tier 2)
+# Trading Card Generator Project Specification (Tier 2)
 Marketing Department
 
-## Project Brief
+## Project Description
 Create a dynamic trading card generation system that showcases fellow achievements in an engaging format.
 
 ## Core Requirements

@@ -1,7 +1,7 @@
-# Team Generator Project (Tier 1)
+# Team Generator Project Specification (Tier 1)
 People Operations Department
 
-## Project Brief
+## Project Description
 Build an automated team formation tool to streamline the sprint team creation process.
 
 ## Core Requirements
