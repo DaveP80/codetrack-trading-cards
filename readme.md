@@ -85,8 +85,11 @@ Both projects are needed for the upcoming community showcase sprint. Choose base
 2. Select your preferred project
 3. Begin planning your project steps
 
-## Resources
-URL: https://pursuit.codetrack.dev/
+## Technical Specifications
+
+Please review the following technical specifications for each project:
+- [Tier 1 Link](./team-generator-spec.md) - Team Generator
+- [Tier 2 Link](./trading-card-spec.md) - Trading Card Generator
 
 
 Reach out to your manager for any questions or clarifications.
