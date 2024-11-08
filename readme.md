@@ -13,10 +13,10 @@ We've categorized these projects based on complexity:
 
 ## Department Needs
 
-### People Operations - Team Generator (Tier 1)
+### People Operations - Team Generator ([Tier 1](./team-generator-spec.md))
 The People Ops team is struggling with manual team formation for sprints. They need an automated solution to create balanced teams while keeping the process fun and engaging. This project focuses on basic data collection and AI-powered team formation.
 
-### Marketing Department - Trading Card Generator (Tier 2)
+### Marketing Department - Trading Card Generator ([Tier 2](./trading-card-spec.md))
 The Marketing team wants to create engaging "Developer Trading Cards" to showcase our fellows' achievements in a fun, gamified way. This project requires more complex data processing, AI integration, and frontend generation skills. The cards will be used for social media, community engagement, and potentially physical prints.
 
 ## Project Selection
