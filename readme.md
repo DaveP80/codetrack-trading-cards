@@ -81,15 +81,17 @@ Both projects are needed for the upcoming community showcase sprint. Choose base
 - Project leads available for questions during implementation
 
 ## Next Steps
-1. Review both project specifications in detail
-2. Select your preferred project
-3. Begin planning your project steps
-
-## Technical Specifications
-
-Please review the following technical specifications for each project:
-- [Tier 1 Link](./team-generator-spec.md) - Team Generator
-- [Tier 2 Link](./trading-card-spec.md) - Trading Card Generator
+1. Review both project technical specifications in detail
+   - [Tier 1](./team-generator-spec.md) - Team Generator
+   - [Tier 2](./trading-card-spec.md) - Trading Card Generator
+2. Review the video examples for both projects
+   - [Tier 1](https://drive.google.com/file/d/18YJBZF9fcPqI_sU9NHRBvoj5nUzh9wQM/view?usp=sharing) - Team Generator
+   - [Tier 2](https://drive.google.com/file/d/1991jY4Widl5cLsxN4_lNX9rIfePn6aAO/view?usp=sharing) - Trading Card Generator
+3. Select your preferred project
+4. Begin planning your project steps and function structure
+5. Solve problems in chunks
+6. Test and debug your code
+7. Refactor your code for readability and scalability
 
 
 Reach out to your manager for any questions or clarifications.
