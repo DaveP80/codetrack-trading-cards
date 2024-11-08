@@ -12,6 +12,13 @@ Your script needs to:
 4. Generate creative trading cards via Gemini API
 5. Output both JSON data and responsive HTML
 
+**GOTCHAS** 
+- The site is dynamic and has pagination, you need to scrape all pages
+- Study the Pursuit Codetrack site and understand how it works
+- Not all cards in the Pursuit Codetrack have names, you should skip those cards without names without throwing an error. Your program should keep running
+
+
+
 ## Technical Specifications
 
 ### Suggested Libraries
