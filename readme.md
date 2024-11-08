@@ -4,7 +4,7 @@
 <img src="./assets/learn-nation-logo.webp" alt="learn nation logo" width="350">
 
 ## Overview
-Hey developers! We've got two exciting projects from different departments that need your Python expertise. Both projects involve working with our Pursuit Department'sCodetrack platform data, but they serve different business needs.
+Hey developers! We've got two exciting projects from different departments that need your Python expertise. Both projects involve working with our Pursuit Department's `Codetrack` platform data, but they serve different business needs.
 
 ## Project Tiers
 We've categorized these projects based on complexity:
