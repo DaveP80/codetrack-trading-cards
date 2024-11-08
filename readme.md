@@ -84,7 +84,7 @@ Both projects are needed for the upcoming community showcase sprint. Choose base
 1. Review both `Project Technical Specifications` in detail
    - [Tier 1](./team-generator-spec.md) - Team Generator
    - [Tier 2](./trading-card-spec.md) - Trading Card Generator
-2. Review the `Video Examples` for both projects
+2. Watch the `Video Examples` for both projects
    - [Tier 1](https://drive.google.com/file/d/18YJBZF9fcPqI_sU9NHRBvoj5nUzh9wQM/view?usp=sharing) - Team Generator
    - [Tier 2](https://drive.google.com/file/d/1991jY4Widl5cLsxN4_lNX9rIfePn6aAO/view?usp=sharing) - Trading Card Generator
 3. Select your preferred project
