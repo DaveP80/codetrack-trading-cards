@@ -8,8 +8,8 @@ Hey developers! We've got two exciting projects from different departments that 
 
 ## Project Tiers
 We've categorized these projects based on complexity:
-- **Tier 1 (Entry Level)**: Team Generator - Perfect for developers getting comfortable with basic web scraping and API integration
-- **Tier 2 (Advanced)**: Trading Card Generator - Ideal for developers ready to tackle more complex data processing and frontend HTMLgeneration
+- **[Tier 1](./team-generator-spec.md)**: Team Generator - Perfect for developers getting comfortable with basic web scraping and API integration
+- **[Tier 2](./trading-card-spec.md)**: Trading Card Generator - Ideal for developers ready to tackle more complex data processing and frontend HTMLgeneration
 
 ## Department Needs
 
@@ -21,8 +21,8 @@ The Marketing team wants to create engaging "Developer Trading Cards" to showcas
 
 ## Project Selection
 Consider your current skill level and interests when choosing your project:
-- **Choose Tier 1** if you're comfortable with basic Python scripting and want to focus on core functionality
-- **Choose Tier 2** if you're ready to challenge yourself with more complex data processing and frontend development
+- **Choose [Tier 1](./team-generator-spec.md)** if you're comfortable with basic Python scripting and want to focus on core functionality
+- **Choose [Tier 2](./trading-card-spec.md)** if you're ready to challenge yourself with more complex data processing and frontend development
 
 ## Project Impact & Career Growth Opportunities
 
