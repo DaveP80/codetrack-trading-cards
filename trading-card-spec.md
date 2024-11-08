@@ -4,6 +4,8 @@ Marketing Department
 ## Project Description
 Create a dynamic trading card generation system that showcases fellow achievements in an engaging format.
 
+[VIDEO EXAMPLE](https://drive.google.com/file/d/1991jY4Widl5cLsxN4_lNX9rIfePn6aAO/view?usp=sharing) - a possible example of what your program should do 
+
 ## Core Requirements
 Your script needs to:
 1. Scrape all student names and total points from https://pursuit.codetrack.dev/ site from the `Chrome Browser`

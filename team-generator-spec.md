@@ -4,6 +4,8 @@ People Operations Department
 ## Project Description
 Build an automated team formation tool to streamline the sprint team creation process.
 
+[VIDEO EXAMPLE](https://drive.google.com/file/d/18YJBZF9fcPqI_sU9NHRBvoj5nUzh9wQM/view?usp=sharing) - a possible example of what your program should do
+
 ## Core Requirements
 Your script needs to:
 1. Scrape all student names and total points from https://pursuit.codetrack.dev/ site from the `Chrome Browser`
