@@ -1,4 +1,5 @@
 # Core libraries
+import logging
 from dotenv import load_dotenv    # API key management
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -32,40 +33,43 @@ def getCards():
 
     driver = webdriver.Chrome(options=options, service=service)
     page_links = []
+    unique_rows = set()
     found_button = True
 
     driver = webdriver.Chrome(options=options, service=service)
     driver.get("https://pursuit.codetrack.dev/")
-    wait = WebDriverWait(driver, 10)  # Increase the wait time to ensure the page fully loads
+    wait = WebDriverWait(driver, 10)
     wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "div[class='playerCardCollection__container']"))) 
-
 # Find all the li elements within the ul element
-    li_elements = wait.unit(EC.visibility_of_element_located((By.CSS_SELECTOR, "ul[class='MuiPagination-ul css-nhb8h9']")))
-
+    ul_element = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "ul[class='MuiPagination-ul css-nhb8h9']")))
+    li_elements = ul_element.find_elements(By.TAG_NAME, 'li')
     # Extract the text from each li element
     for li in li_elements:
         try:
             url_int = int(li.text)
             page_links.append(url_int)
-        except:
+        except ValueError:
             pass
-    while found_button:
+    for n in range(page_links[-1]):
         try:
+            driver.get(f"https://pursuit.codetrack.dev/?page={n+1}")
             container_div = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "div[class='playerCardCollection__container']")))
             print(container_div)
             player_divs = container_div.find_elements(By.CSS_SELECTOR, '.playerCard__notGraph')
             for player_div in player_divs:
                 player_name = player_div.find_elements(By.CSS_SELECTOR, '.playerCard__name')
                 player_score = player_div.find_elements(By.CSS_SELECTOR, '.playerCard__totalScore .playerCard__points')
-                with open('player_scores.csv', mode='a', newline='') as file:
-                    writer = csv.writer(file)
-                    for name, score in zip(player_name, player_score):
-                        writer.writerow([name.text, score.text])
-            nextp_icon = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button[aria-label='Go to next page']")))
-            if nextp_icon:
-                nextp_icon.click()
-        except:
-            found_button = False
+                if len(player_name[0].text) > 2:
+                    with open('player_scores.csv', mode='a', newline='') as file:
+                        writer = csv.writer(file)
+                        row_tuple = tuple([player_name[0].text, player_score[0].text])
+                        if row_tuple not in unique_rows:
+                            writer.writerow([player_name[0].text, player_score[0].text])
+                            unique_rows.add(row_tuple)
+            time.sleep(1)
+        except NoSuchElementException as e:
+            logging.error(e)
+            
 def main():
    # call your functions and print results to signal the user here and remove the 'pass' word below
     with open('player_scores.csv', mode='w', newline='') as file:
