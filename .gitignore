@@ -6,5 +6,5 @@ enhanced-assignment-brief.md
 .env
 venv/
 .python-version
-
+.dockerignore
 .DS_Store

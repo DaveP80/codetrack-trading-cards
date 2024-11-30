@@ -36,6 +36,7 @@ RUN pip install typing_extensions==4.10.0
 RUN pip install urllib3==2.2.1
 RUN pip install webdriver-manager==4.0.1
 RUN pip install wsproto==1.2.0
+RUN pip install google-generative-ai
 COPY --from=build /opt/chrome-linux64 /opt/chrome
 COPY --from=build /opt/chromedriver-linux64 /opt/
 COPY main.py ./
