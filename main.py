@@ -1,42 +1,31 @@
 # Core libraries
 import logging
-from dotenv import load_dotenv    # API key management
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException
 import time
-import re
-from tempfile import mkdtemp
 import csv
+from open_gen import get_completion
+
+CHROMEDRIVER_PATH = '/usr/bin/chromedriver'
+prompt = """make a pretend trading card about coding and programming, that highlights the 
+strengths and accomplishments of this programmer given their name and score on codewars."""
 
 def getCards():
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument("--disable-gpu")
 
-    options = webdriver.ChromeOptions()
-    service = webdriver.ChromeService("/opt/chromedriver")
-
-    options.binary_location = '/opt/chrome/chrome'
-    options.add_argument("--headless")
-    options.add_argument('--no-sandbox')
-    options.add_argument("--disable-gpu")
-    options.add_argument("--window-size=1280x1696")
-    options.add_argument("--single-process")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--disable-dev-tools")
-    options.add_argument("--no-zygote")
-    options.add_argument(f"--user-data-dir={mkdtemp()}")
-    options.add_argument(f"--data-path={mkdtemp()}")
-    options.add_argument(f"--disk-cache-dir={mkdtemp()}")
-    options.add_argument("--remote-debugging-port=9222")
-
-    driver = webdriver.Chrome(options=options, service=service)
+    service = Service(CHROMEDRIVER_PATH)
+    driver = webdriver.Chrome(service=service, options=chrome_options)
     page_links = []
     unique_rows = set()
-    found_button = True
-
-    driver = webdriver.Chrome(options=options, service=service)
     driver.get("https://pursuit.codetrack.dev/")
     wait = WebDriverWait(driver, 10)
     wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "div[class='playerCardCollection__container']"))) 
@@ -50,9 +39,12 @@ def getCards():
             page_links.append(url_int)
         except ValueError:
             pass
+    driver.quit()
     for n in range(page_links[-1]):
         try:
-            driver.get(f"https://pursuit.codetrack.dev/?page={n+1}")
+            chrome_driver = webdriver.Chrome(service=service, options=chrome_options)
+            wait = WebDriverWait(chrome_driver, 10)
+            chrome_driver.get(f"https://pursuit.codetrack.dev/?page={n+1}")
             container_div = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "div[class='playerCardCollection__container']")))
             print(container_div)
             player_divs = container_div.find_elements(By.CSS_SELECTOR, '.playerCard__notGraph')
@@ -67,8 +59,12 @@ def getCards():
                             writer.writerow([player_name[0].text, player_score[0].text])
                             unique_rows.add(row_tuple)
             time.sleep(1)
+            chrome_driver.quit()
         except NoSuchElementException as e:
             logging.error(e)
+    if page_links:
+        make_json(page_links)
+    
             
 def main():
    # call your functions and print results to signal the user here and remove the 'pass' word below
@@ -77,5 +73,14 @@ def main():
         writer.writerow(['player_name', 'score']) 
     getCards()
 
+def make_json(page_links):
+    if page_links:
+        get_completion(prompt, "player_scores.csv")
+
+def container():
+    while True:
+        pass
+
 if __name__ == "__main__":
     main()
+    container()

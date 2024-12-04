@@ -7,4 +7,5 @@ enhanced-assignment-brief.md
 venv/
 .python-version
 .dockerignore
-.DS_Store
+*.DS_Store
+open-test.py
