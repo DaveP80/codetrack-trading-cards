@@ -2,7 +2,6 @@
 import logging
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -13,8 +12,6 @@ import csv
 from open_gen import get_completion
 
 CHROMEDRIVER_PATH = '/usr/bin/chromedriver'
-prompt = """make a pretend trading card about coding and programming, that highlights the 
-strengths and accomplishments of this programmer given their name and score on codewars."""
 
 def getCards():
     chrome_options = Options()
@@ -75,7 +72,7 @@ def main():
 
 def make_json(page_links):
     if page_links:
-        get_completion(prompt, "player_scores.csv")
+        get_completion("player_scores.csv")
 
 def container():
     while True:
