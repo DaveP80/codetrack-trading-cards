@@ -9,3 +9,4 @@ venv/
 .dockerignore
 *.DS_Store
 open-test.py
+cards.json
